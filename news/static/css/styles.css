@@ -1,0 +1,183 @@
+/* Custom CSS for your project */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+nav {
+    height: 80px;
+}
+
+/* Navbar styles */
+nav .navbar-nav .nav-item .nav-link {
+    position: relative;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Create box effect for navbar links */
+nav .navbar-nav .nav-item .nav-link.box-effect {
+    background-color: #343a40;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for navbar links */
+nav .navbar-nav .nav-item .nav-link.box-effect:hover {
+    margin: 15px;
+    background-color: #495057;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/* Custom CSS for bullet arrows */
+.bullet-arrow {
+    list-style: none; /* Remove default bullet point */
+    position: relative;
+}
+
+.bullet-arrow::before {
+    content: "→"; /* Unicode character for arrow, you can replace it with other symbols or icons */
+    position: absolute;
+    left: -25px; /* Adjust the position of the arrow */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem; /* Adjust the size of the arrow */
+    color: #007bff; /* Change the color of the arrow */
+}
+
+/* Styling for hover effect on the news articles */
+.bullet-arrow:hover {
+    background-color: #e9ecef;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Active state for navbar link */
+nav .navbar-nav .nav-item .nav-link.active {
+    background-color: #007bff;
+    transform: scale(1.05);
+   
+}
+
+.container h2{
+    font-family: 'Times New Roman', Times, serif;
+}
+.hero {
+    background-image: url("{% static 'images/hero-bg.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    height: 615px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0; /* Remove extra padding */
+}
+
+.hero-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adds shadow for text */
+    max-width: 90%; /* Ensure text doesn't overflow */
+}
+
+/* Hero section heading */
+.hero h1 {
+    font-size: 3rem;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+/* Hero section subheading (Stay updated with the latest news...) */
+.hero-text {
+    font-size: 1.25rem;
+    opacity: 0;
+    margin-top: 15px; /* Adds space between the heading and subheading */
+    animation: fadeIn 2.5s ease-out 1s forwards; /* Delay added for the second line */
+}
+
+/* Fade in effect for both header and subheading */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Latest News Section Animations */
+.latest-news h2 {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Add animation to the news articles */
+.latest-news ul {
+    opacity: 0;
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+/* Add bold and fade-in for each news article item */
+.list-group-item {
+    border: none;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Hover effect for the news article items */
+.list-group-item:hover {
+    background-color: #e9ecef;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth transition effect for the news article links */
+.list-group-item a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.list-group-item a:hover {
+    color: #007bff;
+    transform: translateX(5px); /* Adds a slight movement effect */
+}
+
+/* Animate section titles */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer Styling */
+footer {
+    font-size: 1rem;
+    background-color: #343a40;
+}
+
+/* Add smooth transitions for footer */
+footer p {
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+footer:hover {
+    background-color: #495057;
+}
